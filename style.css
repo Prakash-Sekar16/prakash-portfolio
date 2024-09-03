@@ -149,8 +149,8 @@ span{
     border-radius: 50%;
 }
 .home-img img {
-    width: 30vw;
-    height: 30vw; /* Ensure the image is square */
+    width: 35rem;
+    height: 35rem; /* Ensure the image is square */
     border-radius: 50%;
     object-fit: cover; /* Scale the image to fill the container */
     position: relative;
@@ -430,19 +430,19 @@ span{
     align-items: baseline;
     padding: 5rem 5rem;
     box-sizing: border-box;
-    margin-bottom: 2rem
+    margin-bottom: 3rem
 }
 .service-info h4{
     margin-bottom: 1.5rem;
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 600;
     line-height: 1;
 }
 .service-info p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
     max-height: 100px;
-    line-height: 1.7;
+    line-height: 1.5;
     margin: auto;
 }
 
@@ -570,12 +570,12 @@ span{
         font-size: 55%;
     }
     .services-container{
-        padding-bottom: 7rem;
+        padding-bottom: 1rem;
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
     }
 }
-@media(max-width:991px){
+@media(max-width:1050px){
     header{
         padding: 1rem 2%;
     }
@@ -597,7 +597,7 @@ span{
         left: 0;
     }
     .services{
-        padding-bottom: 7rem;
+        padding-bottom: 5rem;
     }
     .Projects .wrapper{
         grid-template-columns: repeat(1,1fr);
@@ -609,22 +609,26 @@ span{
         padding: 2rem 3%;
     }
 }
-@media(max-width:895px){
+@media(max-width:750px){
+    /* Menu Icon */
     #menu-icon{
         display: block;
     }
+
+    /* Navbar Styling */
     .navbar{
-        position: absolute;
+        position: fixed; /* Change to fixed for better mobile UX */
         top: 100%;
         right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
+        width: 70%; /* Adjust width for better visibility on mobile */
+        padding: 1rem 5%; /* Increase padding */
+        background: rgba(0, 0, 0, 0.9); /* Slightly darker background */
         backdrop-filter: blur(20px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         display: none;
+        z-index: 1000; /* Ensure it stays on top */
     }
     .navbar .active{
         display: block;
@@ -635,45 +639,56 @@ span{
         margin: 3rem 0;
         color: var(--main-color);
     }
+
+    /* Home Section */
     .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 3rem 2rem; /* Adjust margin */
     }
     .home-content h3{
-        font-size: 2.6rem;
+        font-size: 2.2rem; /* Slightly smaller font */
     }
     .home-content h1{
-        font-size: 5rem;
-        margin-bottom: 2rem
+        font-size: 4.5rem; /* Adjust font size */
+        margin-bottom: 1rem;
     }
     .home-content p{
-        max-width: 600px;
+        max-width: 100%; /* Maximize width */
         margin: 0 auto;
     }
     .home-img img {
-        width: 70vw; /* Increase width on smaller screens for better visibility */
-        height: 70vw; /* Maintain circular shape */
+        width: 80vw; /* Adjust width for better mobile display */
+        height: 80vw; /* Maintain circular shape */
     }
+
+    /* Services Section */
     .services h2{
-        margin-bottom: 5rem;
+        margin-bottom: 4rem; /* Adjust margin */
     }
     .services-container{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr; /* Ensure single-column layout */
+    }
+    .service-box{
+        box-sizing: border-box;
     }
     .service-info p{
         margin: auto;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
     }
+
+    /* Projects Section */
     .Projects-item {
-        width: 80%; /* Reduce the width of the container, adjust as needed */
-        max-width: 1200px; /* Set a maximum width to prevent it from becoming too large on wide screens */
-        margin: 0 auto; /* Center the container horizontally */
-        padding: 1rem; /* Adjust padding for inner spacing */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        width: 90%; /* Maximize width for mobile */
+        max-width: 1000px; /* Reduce max width */
+        margin: 0 auto;
+        padding: 1rem;
+        box-sizing: border-box;
     }
     .Projects-box img{
-        width: 30rem;
-        border: 0.5px solid var(--main-color);
+        width: 100%; /* Use full width of the container */
+        border: 1px solid var(--main-color);
         box-shadow: 0 0 20px var(--main-color);
     }
-    
 }
